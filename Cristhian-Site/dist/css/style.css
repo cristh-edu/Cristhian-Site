@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700i|Yellowtail&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: #FFFAFB;
+    font-family: 'Open Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+nav{
+    background-color: #000;
+    color: #FFFAFB;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5% ;
+}
+
+nav > div > a{
+  font-family: 'Yellowtail', cursive;  
+   text-decoration: none;
+   font-size: xx-large;
+   color: #FFFAFB;
+   text-shadow: #16C172 1px 1px 0px;
+   animation: link 5s ease-in-out forwards;
+}
+
+nav > ul > li {
+  font-family: 'Yellowtail', cursive;
+  padding: 5px 10px;
+  display: inline;
+  font-size: x-large;
+   color: #FFFAFB;
+   text-shadow: #16C172 1px 1px 0px;
+}
+
+nav > ul > li > a{ 
+  color: #FFFAFB;
+  text-decoration: none;
+}
+
+nav > ul > li:hover, nav > a:hover{
+  animation: link 5s ease-in-out forwards;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Yellowtail', cursive; 
+  font-size: 4em;
+  color: #000;
+  text-shadow:
+  #FFFAFB  1px  1px 0px,
+  #FFFAFB -1px  1px 0px,
+  #FFFAFB  1px -1px 0px,
+  #FFFAFB -1px -1px 0px,
+  #000  2px  2px 0px,
+  #000 -2px  2px 0px,
+  #000  2px -2px 0px,
+  #000 -2px -2px 0px;
+  filter: drop-shadow(2px 2px 3px rgba(255,255,255, 1));
+}
+
+h2{
+  font-family: 'Yellowtail', cursive; 
+  font-size: 2.5em;
+  color: #000;
+  text-shadow:
+  #FFFAFB  1px  1px 0px,
+  #000  2px  2px 0px;
+}
+
+p{
+  font-family: 'Yellowtail', cursive; 
+  font-size: 1.8em;
+  color: #000;
+}
+
+p > b {
+  color: rgba(0, 0, 0);
+  text-shadow: 
+  1px 1px 0px #fff,
+  2px 2px 0px #000;
+}
+
+ul > li > b {
+  text-shadow: 0.5px 0.5px 0px #fff,
+  1px 1px 0px #000;
+
+}
+
+#section-inicio{
+  height: 20vh;
+  padding: 40vh 25vw;
+  background: #000;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(110%) saturate(150%) sepia(50%);
+}
+
+.svg-animado{
+  width: 50vw;
+  filter: drop-shadow( 2px  2px 1.5px rgba(0,0,0,0.5)) 
+          drop-shadow(-2px  2px 1.5px rgba(0,0,0,0.5)) 
+          drop-shadow(-2px -2px 1.5px rgba(0,0,0,0.5)) 
+          drop-shadow( 2px -2px 1.5px rgba(0,0,0,0.5)) ;
+}
+
+.svg-animado svg{
+  stroke-width: 40px;
+  stroke: #FFFAFB;
+  width: 100%;
+  height: 100%;
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 500;
+  animation: animacaosvg 5s ease-in-out forwards;
+}
+
+@keyframes animacaosvg {
+  0%{    
+    stroke-dasharray: 35100;
+  }
+  70%{
+    stroke-dasharray: 75000;
+  }
+  100%{
+    stroke-dasharray: 75000;
+  }
+  
+}
+
+@keyframes link {
+  0%{    
+    text-shadow: #16C172 1px 1px 0;
+  }
+  50%{
+    text-shadow: #16C172 0px 0px 10px;
+  }
+  100%{
+    text-shadow: #16C172 1px 1px 0px;
+  }
+  
+}
+
+.underline {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.underline,
+.underline:hover,
+.underline:focus,
+.underline:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+}
+
+ .underline::after {
+  top: 90%;
+  height: 2px;
+  width: 0%;
+  left: 5%;
+  background-color: white;
+    transition: 0.5s ease all .3s;
+}
+
+.link .underline:hover:after {
+  width: 90%;
+    transition: 0.3s ease all;
+}
+
+#section-experiencias, #section-portifolio, #section-contatos{
+  padding: 0 20%;
+}
+
+.comp{
+  width: 100%;
+  columns: 6;
+  column-gap: inherit;
+
+}
+
+.comp img{
+  width: 100%;
+}
+
+@media only screen and (max-device-width:768px){
+
+  nav{
+    height: 7vh;
+  }
+
+  #section-inicio{
+    padding: 40vh 5vw;
+    height: 20vh;
+  }
+  .svg-animado{
+    width: 90vw;
+  }
+  
+}
